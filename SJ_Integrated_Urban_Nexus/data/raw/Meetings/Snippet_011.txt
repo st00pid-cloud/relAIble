@@ -1,0 +1,3 @@
+**Snippet 011: 5G Infrastructure & Connectivity Sync**
+* **Attendees:** Amina Al-Farsi, Daniel Kim, Robert Kwok.
+* **Discussion:** Daniel reported that the 5G Node Hardware Install (Task 19.0) is now Blocked. A global shortage of semi-conductor housing units has halted the assembly line.

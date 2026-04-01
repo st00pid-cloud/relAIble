@@ -1,0 +1,247 @@
+[
+  {
+    "name": "Arjun Mehta",
+    "role": "Principal Urban Planner",
+    "tone": "Visionary, structured, and diplomatic."
+  },
+  {
+    "name": "Sarah Chen",
+    "role": "BIM Manager",
+    "tone": "Direct, technical, and process-oriented."
+  },
+  {
+    "name": "David O’Sullivan",
+    "role": "Lead Structural Engineer",
+    "tone": "Pragmatic, cautious, and detail-heavy."
+  },
+  {
+    "name": "Elena Rodriguez",
+    "role": "Sustainability Lead",
+    "tone": "Passionate, persuasive, and data-driven."
+  },
+  {
+    "name": "Marcus Wong",
+    "role": "Digital Twin Integration Specialist",
+    "tone": "Innovative, fast-paced, and jargon-heavy."
+  },
+  {
+    "name": "Priya Lakshmi",
+    "role": "Landscape Architect",
+    "tone": "Collaborative, descriptive, and aesthetic-focused."
+  },
+  {
+    "name": "Geoffery Tan",
+    "role": "Contract Administrator",
+    "tone": "Formal, meticulous, and risk-averse."
+  },
+  {
+    "name": "Amina Al-Farsi",
+    "role": "Smart Cities Consultant",
+    "tone": "Strategic, inquisitive, and high-level."
+  },
+  {
+    "name": "Thomas Müller",
+    "role": "Façade Engineer",
+    "tone": "Analytical, precise, and objective."
+  },
+  {
+    "name": "Linda Ng",
+    "role": "MEP Coordinator",
+    "tone": "Urgent, problem-solving, and brief."
+  },
+  {
+    "name": "James Peterson",
+    "role": "Chief Safety Officer",
+    "tone": "Authoritative, stern, and compliance-focused."
+  },
+  {
+    "name": "Chloe Dupont",
+    "role": "Environmental Impact Analyst",
+    "tone": "Scientific, thorough, and neutral."
+  },
+  {
+    "name": "Kevin Zhang",
+    "role": "VDC (Virtual Design & Construction) Lead",
+    "tone": "Tech-savvy, efficient, and visual-oriented."
+  },
+  {
+    "name": "Sofia Rossi",
+    "role": "Procurement Manager",
+    "tone": "Negotiatory, firm, and budget-conscious."
+  },
+  {
+    "name": "Hiroshi Tanaka",
+    "role": "Geotechnical Consultant",
+    "tone": "Methodical, dense, and observational."
+  },
+  {
+    "name": "Rachael Smythe",
+    "role": "Stakeholder Relations Manager",
+    "tone": "Empathetic, polished, and inclusive."
+  },
+  {
+    "name": "Samuel Lee",
+    "role": "Infrastructure Project Director",
+    "tone": "Decisive, brief, and results-oriented."
+  },
+  {
+    "name": "Fatima Zahra",
+    "role": "Renewable Energy Specialist",
+    "tone": "Optimistic, forward-looking, and technical."
+  },
+  {
+    "name": "Ben Richardson",
+    "role": "Site Supervisor",
+    "tone": "Colloquial, blunt, and action-oriented."
+  },
+  {
+    "name": "Isabella Varga",
+    "role": "Acoustics Consultant",
+    "tone": "Nuanced, specific, and academic."
+  },
+  {
+    "name": "Omar Bakri",
+    "role": "Transport Modeller",
+    "tone": "Logic-driven, iterative, and systematic."
+  },
+  {
+    "name": "Jessica Low",
+    "role": "Quantity Surveyor",
+    "tone": "Precise, inquisitive about variations, and dry."
+  },
+  {
+    "name": "Vikram Singh",
+    "role": "Hydraulic Engineer",
+    "tone": "Practical, technical, and safety-conscious."
+  },
+  {
+    "name": "Alice Thompson",
+    "role": "GIS Analyst",
+    "tone": "Exploratory, data-centric, and visual."
+  },
+  {
+    "name": "Robert Kwok",
+    "role": "Cybersecurity Lead (OT Infrastructure)",
+    "tone": "Alert, guarded, and instructive."
+  },
+  {
+    "name": "Zoe Castellano",
+    "role": "Interior Architect",
+    "tone": "Refined, sensory, and user-centric."
+  },
+  {
+    "name": "Hassan Meer",
+    "role": "Lighting Designer",
+    "tone": "Creative, technical, and atmosphere-focused."
+  },
+  {
+    "name": "Emily Watson",
+    "role": "Heritage Conservationist",
+    "tone": "Protective, historical, and detailed."
+  },
+  {
+    "name": "Daniel Kim",
+    "role": "Automation & Robotics Lead",
+    "tone": "Future-focused, enthusiastic, and complex."
+  },
+  {
+    "name": "Siti Nurhaliza",
+    "role": "Document Controller",
+    "tone": "Organized, persistent, and rule-following."
+  },
+  {
+  "technical_entities": {
+    "large_scale_sports_and_infrastructure": {
+      "example_project": "Kai Tak Sports Park",
+      "entities": [
+        {
+          "name": "Acoustic Sealing",
+          "definition": "Specialized insulation systems designed to contain noise within stadium bowls."
+        },
+        {
+          "name": "Retractable Roof Segments",
+          "definition": "Independent moving sections of a stadium roof requiring synchronized motor control."
+        },
+        {
+          "name": "Turf Management Sensors",
+          "definition": "IoT devices embedded in the pitch to monitor soil moisture and grass health."
+        },
+        {
+          "name": "Wind-Load Buffer Zones",
+          "definition": "Aerodynamic structural features designed to mitigate high-velocity wind pressure on large canopies."
+        },
+        {
+          "name": "Multi-Purpose Main Stadium Bowl",
+          "definition": "A reconfigurable seating and floor system for transitioning between sports and concerts."
+        },
+        {
+          "name": "Pre-cast Seating Treads",
+          "definition": "High-precision concrete tiers manufactured off-site for rapid stadium assembly."
+        },
+        {
+          "name": "Dynamic Façade Lighting Nodes",
+          "definition": "Individually addressable LED components integrated into the building skin."
+        },
+        {
+          "name": "Vibration Isolation Springs",
+          "definition": "Damping systems used to prevent structural resonance during high-capacity events."
+        },
+        {
+          "name": "ETFE Cushion System",
+          "definition": "Lightweight, transparent plastic foil used for high-performance roofing and cladding."
+        },
+        {
+          "name": "Crowd Flow Heatmaps",
+          "definition": "Real-time visual data representing pedestrian density for safety management."
+        }
+      ]
+    },
+    "5g_and_digital_command_centres": {
+      "example_project": "Smart City Operations",
+      "entities": [
+        {
+          "name": "Digital Twin Sync",
+          "definition": "The process of aligning a physical asset’s real-time sensor data with its 3D digital model."
+        },
+        {
+          "name": "GSIMS Platform",
+          "definition": "Geographical Spatial Information Management System used for large-scale asset tracking."
+        },
+        {
+          "name": "URLLC (Ultra-Reliable Low-Latency Communications)",
+          "definition": "A 5G capability essential for real-time remote machinery control."
+        },
+        {
+          "name": "Edge Computing Nodes",
+          "definition": "Localized data processing units that reduce latency by handling data close to the source."
+        },
+        {
+          "name": "Holographic Telepresence",
+          "definition": "3D communication technology used in command centers for remote site inspections."
+        },
+        {
+          "name": "AI-Driven Predictive Maintenance",
+          "definition": "Algorithms that forecast equipment failure based on historical vibration and heat data."
+        },
+        {
+          "name": "C-V2X (Cellular Vehicle-to-Everything)",
+          "definition": "Communication protocols for autonomous site vehicles within a 5G network."
+        },
+        {
+          "name": "BIM-to-FM Handover Protocol",
+          "definition": "The standardized transfer of Building Information Modeling data into Facilities Management software."
+        },
+        {
+          "name": "Network Slicing",
+          "definition": "Dividing a 5G network into multiple virtual networks for dedicated project functions (e.g., security vs. public Wi-Fi)."
+        },
+        {
+          "name": "Lidar Point Cloud Mesh",
+          "definition": "A high-density 3D map generated by laser scanning used for verifying 'as-built' accuracy."
+        }
+      ]
+    }
+  }
+}
+]
+

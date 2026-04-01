@@ -1,0 +1,3 @@
+**Snippet 002: Digital Command Centre Sync**
+* **Attendees:** Marcus Wong, Daniel Kim, Robert Kwok.
+* **Discussion:** Daniel noted that the 5G Node Hardware install (Task 19.0) might be delayed. He suggested we start "whenever the North Sector is ready, maybe mid-November?"

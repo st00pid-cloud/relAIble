@@ -1,0 +1,3 @@
+Date: 2026-05-12 11:00 AM | Attendees: Marcus Wong, Alice Thompson, Kevin Zhang | Source: Meeting Minute
+**Snippet 014: Digital Twin Data Integration**
+* Discussion: Marcus confirmed a date change for the Digital Twin Framework (Task 4.0). Due to GSIMS mapping delays, the new Start Date is set for May 18, 2026.

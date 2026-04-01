@@ -1,0 +1,2 @@
+From: Robert Kwok | To: Samuel Lee | Subject: URGENT: Security Protocol
+Samuel, we need to add a New Task: "Employee Phishing Simulation" for all staff accessing the 5G Command Centre before Task 25.0 begins.

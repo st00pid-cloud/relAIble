@@ -1,0 +1,3 @@
+**Snippet 018: Operational Technology (OT) Security**
+* **Attendees:** Robert Kwok, Daniel Kim.
+* **Discussion:** Robert mandated a New Task: "Intrusion Detection System (IDS) Calibration." This must be performed on the 5G nodes before syncing to the GSIMS platform.

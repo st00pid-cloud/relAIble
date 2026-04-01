@@ -1,0 +1,52 @@
+[
+  {
+    "id": "Snippet_008",
+    "description": "Detection of Date Change",
+    "correct_extraction": {
+      "task": "Public Stakeholder Town Hall Series",
+      "owner": "Rachael Smythe",
+      "due_date": "2026-07-27",
+      "status": "On Track"
+    }
+  },
+  {
+    "id": "Email_021",
+    "description": "Detection of Blocker and Delay (Baseline was Aug 28)",
+    "correct_extraction": {
+      "task": "Procurement of High-Grade Structural Steel",
+      "owner": "Sofia Rossi",
+      "due_date": "2026-09-25",
+      "status": "Blocked"
+    }
+  },
+  {
+    "id": "Snippet_010",
+    "description": "Detection of New Task (Not in Baseline)",
+    "correct_extraction": {
+      "task": "Migratory Bird Flight Path Audit",
+      "owner": "Chloe Dupont",
+      "due_date": "TBD",
+      "status": "Not Started"
+    }
+  },
+  {
+    "id": "Email_023",
+    "description": "Detection of Date Revision (Baseline was May 15)",
+    "correct_extraction": {
+      "task": "Geotechnical Site Assessment (Nexus Bridge)",
+      "owner": "Hiroshi Tanaka",
+      "due_date": "2026-05-22",
+      "status": "On Track"
+    }
+  },
+  {
+    "id": "Snippet_013",
+    "description": "Detection of Ownership Conflict (Conflict detection test)",
+    "correct_extraction": {
+      "task": "MEP Utility Corridor Optimization",
+      "owner": "CONTRADICTION: Linda Ng vs. David O'Sullivan",
+      "due_date": "2026-11-27",
+      "status": "On Track"
+    }
+  }
+]

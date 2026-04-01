@@ -1,0 +1,3 @@
+Date: 2026-10-20 04:22 PM | Recipients: Daniel Kim, Samuel Lee | Source: Email
+From: Daniel Kim | To: Samuel Lee | Subject: Hardware Logistics
+The edge computing nodes are stuck in customs. Task 19.0 (5G Node Hardware install) is Blocked until further notice.

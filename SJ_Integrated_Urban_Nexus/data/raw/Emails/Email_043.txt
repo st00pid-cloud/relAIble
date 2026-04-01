@@ -1,0 +1,2 @@
+From: Amina Al-Farsi | To: Robert Kwok | Subject: 5G Mesh Reliability
+Robert, let’s add a New Task: "5G Mesh Latency Stress Test" for the autonomous shuttles before we finalize Task 5.0.

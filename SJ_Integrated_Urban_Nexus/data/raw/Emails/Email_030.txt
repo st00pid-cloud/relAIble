@@ -1,0 +1,2 @@
+From: Amina Al-Farsi | To: Marcus Wong | Subject: URLLC Mapping
+Marcus, let’s push the start of Task 5.0 (5G Network Topology) to May 25, 2026, to align with new digital twin sync protocols.
