@@ -1,8 +1,9 @@
-# SJ Project Planner - Extraction Agent System
+# relAIble: Extraction Agent System
 
 ## 📋 Overview
-
-The **Extraction Agent** is the first component in Surbana Jurong's AI-powered project management system. It converts unstructured project communications (meeting notes, emails, chat messages) into structured JSON data that feeds into the project tracking pipeline.
+**Extraction Agent** 
+- first component for the AI-powered project management system
+- converts unstructured project communications into structured JSON data that feeds into the project tracking pipeline.
 
 ### System Architecture Context
 
@@ -36,12 +37,10 @@ The **Extraction Agent** is the first component in Surbana Jurong's AI-powered p
 │  Power BI: Real-time Gantt Charts + "What Changed" Summaries    │
 └─────────────────────────────────────────────────────────────────┘
 ```
-
 **This repository focuses on the EXTRACTION AGENT component.**
-
 ---
 
-## 🎯 Purpose & Goals
+## Purpose & Goals
 
 The Extraction Agent must:
 
@@ -51,35 +50,20 @@ The Extraction Agent must:
 4. **Flag** items that need human review before database update
 5. **Maintain** evidence trail for audit and traceability
 
-### Why This Matters
+### Importance
 
-In large infrastructure projects like SJ's Integrated Urban Nexus:
+Large infrastructure projects has multiple, unstructured functions. The Extraction Agent automates the first step which is converting conversations into database-ready updates.
 - **50+ stakeholders** communicate via meetings, emails, chat
 - **30+ concurrent tasks** with interdependencies
 - **Vague language** ("ASAP", "end of summer", "whenever ready") is common
 - **Conflicts** arise when multiple owners claim same task
 - **Manual tracking** is error-prone and time-consuming
 
-The Extraction Agent automates the first step: converting conversations into database-ready updates.
-
----
-
-## 📂 Files in This Repository
-
-```
-/home/claude/
-├── extraction_agent_system_prompt.md   # Complete system prompt (4500+ words)
-├── extraction_agent_test_suite.py      # 10 test cases covering key scenarios
-└── README.md                            # This file
-```
-
----
-
-## 🧠 How It Works
+## Function
 
 ### Input Format
 
-The agent receives text chunks from various sources:
+The agent receives text chunks from various sources: Meeting Notes, Emails and Chat Messages.
 
 **Meeting Notes:**
 ```
@@ -215,11 +199,11 @@ When inferring missing information:
 Detect and explicitly label contradictions rather than arbitrarily choosing one version.
 
 ### 5. **Noise Rejection**
-Return `[]` (empty array) rather than fabricating extractions from irrelevant text.
+Return an empty array rather than fabricating extractions from irrelevant text.
 
 ---
 
-## 🔗 Integration with Downstream Agents
+## Integration with Downstream Agents
 
 ### Delta Agent (Next in Pipeline)
 - Compares extracted JSON against PostgreSQL baseline (`SJ_Nexus_Baseline.csv`)
@@ -239,7 +223,7 @@ Return `[]` (empty array) rather than fabricating extractions from irrelevant te
 
 ---
 
-## 🛠️ Implementation Notes
+## Implementation Notes
 
 ### LLM Requirements
 - Model: GPT-4, Claude Opus, or equivalent
@@ -272,9 +256,7 @@ This helps the agent:
 
 ---
 
-## 📊 Performance Metrics
-
-The agent should be evaluated on:
+##  Performance Metrics
 
 1. **Precision**: % of extractions that are factually correct
    - Target: >95% for high-confidence (≥0.8) extractions
@@ -291,24 +273,8 @@ The agent should be evaluated on:
 5. **Evidence Quality**: % of quotes that are verbatim
    - Target: 100% (strict requirement)
 
----
 
-## 🚀 Future Enhancements
-
-### Phase 2 Features
-- **Multi-turn clarification**: Agent asks follow-up questions for ambiguous inputs
-- **Cross-document linking**: Connect related updates across multiple emails/meetings
-- **Sentiment analysis**: Detect urgency/frustration in communications to auto-escalate
-- **Voice note support**: Transcription + extraction in single pipeline
-
-### Phase 3 Features
-- **Proactive recommendations**: "Task X is blocked, suggest reassigning to Y"
-- **Dependency graph extraction**: Auto-build task dependency network from communications
-- **Risk prediction**: Flag tasks likely to become blocked based on patterns
-
----
-
-## 📚 Reference Documentation
+## Reference Documentation
 
 - **SJ Company Values**: See `/mnt/project/company_values.txt`
 - **Case Studies**: See `/mnt/project/case_study_summary_relAIble.pdf`
@@ -316,23 +282,16 @@ The agent should be evaluated on:
 - **Baseline WBS**: See documents index 18 (SJ_Nexus_Baseline.csv)
 - **Ground Truth**: See documents index 47 (validation/ground_truth.json)
 
----
-
-## 👥 Team & Contributors
-
-**Project Owner**: Surbana Jurong Infrastructure Team  
-**AI Development**: relAIble Challenge Submission  
-**Use Case**: Code Without Barriers - Microsoft Foundry Track
 
 **Core Values Alignment:**
-- ✅ **Unlocking Excellence**: Precise, auditable extractions
-- ✅ **Limitless Imagination**: Intelligent inference from partial data
-- ✅ **Solutions at Scale**: Handles 50+ stakeholders, 30+ tasks
-- ✅ **Future Legacy**: Creates permanent, traceable project records
+-  **Unlocking Excellence**: Precise, auditable extractions
+-  **Limitless Imagination**: Intelligent inference from partial data
+-  **Solutions at Scale**: Handles 50+ stakeholders, 30+ tasks
+- **Future Legacy**: Creates permanent, traceable project records
 
 ---
 
-## 📞 Contact & Support
+## Contact & Support
 
 For questions about this agent:
 - Technical Implementation: See `extraction_agent_system_prompt.md`
@@ -348,14 +307,5 @@ For questions about this agent:
 
 ---
 
-## 📄 License & Usage
+The prompt engineering techniques and schema design may be adapted for similar infrastructure tracking use cases. Always maintain evidence trail. Never compromise on traceability.
 
-This system is designed for Surbana Jurong's internal project management operations. The prompt engineering techniques and schema design may be adapted for similar infrastructure tracking use cases.
-
-**Key Principle**: Always maintain evidence trail. Never compromise on traceability.
-
----
-
-**Last Updated**: 2026-04-02  
-**Version**: 1.0  
-**Status**: Ready for Integration Testing
