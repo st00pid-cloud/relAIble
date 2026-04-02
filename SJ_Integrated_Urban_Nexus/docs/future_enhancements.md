@@ -1,3 +1,4 @@
+---
 # PART 1 
 ---
 
@@ -15,8 +16,8 @@
 - **Risk prediction**: Flag tasks likely to become blocked based on patterns
 
 ---
-
 # PART 2
+---
 ## Future Enhancements
 
 ### Phase 2
