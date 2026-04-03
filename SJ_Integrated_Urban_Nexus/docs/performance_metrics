@@ -1,0 +1,43 @@
+# PART 1: Extraction Eme
+
+---
+
+##  Performance Metrics
+
+1. **Precision**: % of extractions that are factually correct
+   - Target: >95% for high-confidence (≥0.8) extractions
+
+2. **Recall**: % of actual updates captured
+   - Target: >90% (miss rate <10%)
+
+3. **Clarification Rate**: % flagged for human review
+   - Target: 20-30% (balances automation vs. safety)
+
+4. **False Conflict Rate**: % of flagged conflicts that aren't real
+   - Target: <5%
+
+5. **Evidence Quality**: % of quotes that are verbatim
+   - Target: 100% (strict requirement)
+
+---
+
+---
+# PART 2: Delta Eme
+## Performance Metrics
+
+### Expected Performance
+
+- **Precision**: >95% for matched tasks
+- **Recall**: >90% for change detection
+- **False Positive Rate**: <5% for conflicts
+- **Processing Time**: <100ms for 30 tasks
+
+### Monitoring
+
+Track these metrics:
+1. **Match Rate**: % of extracted tasks matched to baseline
+2. **Approval Rate**: % of changes requiring human review
+3. **Critical Rate**: % of changes flagged as critical
+4. **Confidence Distribution**: Histogram of confidence scores
+
+---

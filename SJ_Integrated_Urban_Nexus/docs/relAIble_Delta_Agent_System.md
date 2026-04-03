@@ -441,24 +441,6 @@ def _normalize_task_name(self, name: str) -> str:
 
 ---
 
-## Performance Metrics
-
-### Expected Performance
-
-- **Precision**: >95% for matched tasks
-- **Recall**: >90% for change detection
-- **False Positive Rate**: <5% for conflicts
-- **Processing Time**: <100ms for 30 tasks
-
-### Monitoring
-
-Track these metrics:
-1. **Match Rate**: % of extracted tasks matched to baseline
-2. **Approval Rate**: % of changes requiring human review
-3. **Critical Rate**: % of changes flagged as critical
-4. **Confidence Distribution**: Histogram of confidence scores
-
----
 ---
 
 ##  Related Documentation

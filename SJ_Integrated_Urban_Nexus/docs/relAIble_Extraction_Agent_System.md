@@ -256,22 +256,7 @@ This helps the agent:
 
 ---
 
-##  Performance Metrics
 
-1. **Precision**: % of extractions that are factually correct
-   - Target: >95% for high-confidence (≥0.8) extractions
-
-2. **Recall**: % of actual updates captured
-   - Target: >90% (miss rate <10%)
-
-3. **Clarification Rate**: % flagged for human review
-   - Target: 20-30% (balances automation vs. safety)
-
-4. **False Conflict Rate**: % of flagged conflicts that aren't real
-   - Target: <5%
-
-5. **Evidence Quality**: % of quotes that are verbatim
-   - Target: 100% (strict requirement)
 
 
 ## Reference Documentation
