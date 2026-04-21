@@ -67,6 +67,7 @@ from dataclasses import dataclass, field, asdict
 from datetime import datetime
 from pathlib import Path
 from typing import Iterator
+import urllib.request
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CONFIGURATION
@@ -739,12 +740,71 @@ def run_pipeline(
 
     # Stage 1–3: Index
     index = build_search_index(input_dir)
+    all_chunks = index.all_chunks()
+    for chunk in all_chunks:
+        chunk.relevance_score = score_chunk(chunk)
+
+    if not dry_run:
+        push_chunks_to_azure(all_chunks)
+
     if len(index) == 0:
         log.error("No chunks indexed. Aborting pipeline.")
         return None
 
     # Stage 4: Retrieve
     top_chunks = retrieve_chunks(index, top_k=top_k)
+
+    import urllib.request
+
+def push_chunks_to_azure(chunks: list[DocumentChunk]) -> None:
+    """
+    Upload all chunks from the in-memory index to Azure AI Search.
+    Mirrors the Azure AI Search index push API:
+    POST /indexes/sj-nexus-chunks/docs/index?api-version=2023-11-01
+    """
+    endpoint  = os.environ["AZURE_SEARCH_ENDPOINT"]
+    api_key   = os.environ["AZURE_SEARCH_API_KEY"]
+    index     = "sj-nexus-chunks"
+    url       = f"{endpoint}/indexes/{index}/docs/index?api-version=2023-11-01"
+
+    # Azure Search requires a unique key per document — use content_hash
+    actions = [
+        {
+            "@search.action": "mergeOrUpload",   # idempotent — safe to re-run
+            "id":              chunk.content_hash,
+            "source_file":     chunk.source_file,
+            "source_type":     chunk.source_type,
+            "document_date":   chunk.document_date,
+            "chunk_index":     chunk.chunk_index,
+            "chunk_text":      chunk.chunk_text,
+            "task_ids":        chunk.task_ids,
+            "personas_found":  chunk.personas_found,
+            "entities_found":  chunk.entities_found,
+            "relevance_score": chunk.relevance_score,
+            "content_hash":    chunk.content_hash,
+        }
+        for chunk in chunks
+    ]
+
+    # Azure accepts up to 1000 documents per batch
+    batch_size = 100
+    for i in range(0, len(actions), batch_size):
+        batch   = actions[i : i + batch_size]
+        payload = json.dumps({"value": batch}).encode("utf-8")
+
+        req = urllib.request.Request(
+            url,
+            data    = payload,
+            headers = {
+                "Content-Type": "application/json",
+                "api-key":      api_key,
+            },
+            method  = "POST",
+        )
+        with urllib.request.urlopen(req) as resp:
+            result = json.loads(resp.read())
+            log.info("Uploaded batch %d: %d docs", i // batch_size + 1,
+                     len(result.get("value", [])))
 
     # Stage 5: Prompt assembly
     prompt = build_extraction_prompt(top_chunks)
