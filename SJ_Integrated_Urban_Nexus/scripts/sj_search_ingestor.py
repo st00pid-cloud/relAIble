@@ -757,20 +757,14 @@ def run_pipeline(
     import urllib.request
 
 def push_chunks_to_azure(chunks: list[DocumentChunk]) -> None:
-    """
-    Upload all chunks from the in-memory index to Azure AI Search.
-    Mirrors the Azure AI Search index push API:
-    POST /indexes/sj-nexus-chunks/docs/index?api-version=2023-11-01
-    """
     endpoint  = os.environ["AZURE_SEARCH_ENDPOINT"]
     api_key   = os.environ["AZURE_SEARCH_API_KEY"]
-    index     = "sj-nexus-chunks"
+    index     = "relaible-chunks"
     url       = f"{endpoint}/indexes/{index}/docs/index?api-version=2023-11-01"
 
-    # Azure Search requires a unique key per document — use content_hash
     actions = [
         {
-            "@search.action": "mergeOrUpload",   # idempotent — safe to re-run
+            "@search.action": "mergeOrUpload",
             "id":              chunk.content_hash,
             "source_file":     chunk.source_file,
             "source_type":     chunk.source_type,
@@ -786,7 +780,6 @@ def push_chunks_to_azure(chunks: list[DocumentChunk]) -> None:
         for chunk in chunks
     ]
 
-    # Azure accepts up to 1000 documents per batch
     batch_size = 100
     for i in range(0, len(actions), batch_size):
         batch   = actions[i : i + batch_size]
@@ -805,9 +798,6 @@ def push_chunks_to_azure(chunks: list[DocumentChunk]) -> None:
             result = json.loads(resp.read())
             log.info("Uploaded batch %d: %d docs", i // batch_size + 1,
                      len(result.get("value", [])))
-
-    # Stage 5: Prompt assembly
-    prompt = build_extraction_prompt(top_chunks)
 
     # ── Dry-run output ───────────────────────────────────────────────────────
     if dry_run:
